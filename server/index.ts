@@ -5,7 +5,12 @@ const cors = require('cors')
 
 const app = express();
 const server = http.createServer(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server,{
+    cors: {
+        origin: "*",
+        methods: ["GET", "POST"]
+      }
+});
 
 app.use(cors({
     origin:'*'
@@ -34,8 +39,6 @@ io.on('connection', (socket:any) => {
 socket.join(roomname);
 
     socket.on('send-message',(data:userData)=>{
- 
         io.to(roomname).emit('user-message',data)
-
     })
 })
