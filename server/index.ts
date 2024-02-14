@@ -5,7 +5,12 @@ const cors = require('cors')
 
 const app = express();
 const server = http.createServer(app);
-const io = require('socket.io')(server);
+const io = require('socket.io')(server,{
+    cors: {
+        origin: 'https://wordlecup-assignment.netlify.app',
+        methods: ['GET', 'POST']
+      }
+});
 
 app.use(cors());
 app.use(express.json());
