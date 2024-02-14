@@ -1,13 +1,27 @@
+
+import { useMemo, useState } from 'react'
 import './App.css'
 import Chatpage from './pages/Chatpage'
 import Home from './pages/Home'
+import {io} from "socket.io-client";
+
 
 function App() {
 
+  const socket = useMemo(()=>io("http://localhost:3000"),[])
+
+  const[userDetails,setUserDetails] = useState({
+    username:'',
+    userId:'',
+    userIcon:'',
+    userColor:''
+  })
+console.log(userDetails.username);
   return (
     <>
-     {/* <Home/> */}
-     <Chatpage/>
+    {
+       (userDetails.userId && userDetails.username)?(<Chatpage userDetails={userDetails} socket={socket}/>):(<Home setUserDetails={setUserDetails} userDetails={userDetails} />)
+    }
     </>
   )
 }
