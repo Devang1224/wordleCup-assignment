@@ -1,14 +1,14 @@
-const {Server} = require('socket.io')
+
 const express = require('express')
 const http = require('http');
 const cors = require('cors')
 
 const app = express();
 const server = http.createServer(app);
-
+const io = require('socket.io')(server);
 
 app.use(cors({
-    origin:'https://wordlecup-assignment.netlify.app'
+    origin:'*'
 }));
 app.use(express.json());
 
@@ -27,11 +27,6 @@ server.listen(3000, () => {
     console.log('server is running');
 })
 
-const io = new Server(server, {
-    cors:{
-        origin:'*'
-    }
-});
 
 io.on('connection', (socket:any) => {
 
