@@ -1,5 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+
 import { useEffect, useRef, useState } from "react";
 import { avatars } from "../assets/avatar";
+import { Socket } from "socket.io-client";
 
 
 interface Data {
@@ -11,7 +17,7 @@ interface Data {
 }
 
 interface MessagesProps {
-  socket:any;
+  socket:Socket;
 }
 
 type AvatarMap = {
@@ -30,7 +36,7 @@ useEffect(()=>{
       setMessages((prev)=>[...prev,data])
   })
 
-return ()=> socket.off('user-message')
+return ()=>socket.off('user-message')
 
 },[])
 

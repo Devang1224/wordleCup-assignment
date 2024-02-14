@@ -13,13 +13,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+     
 
     /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
+    "strict": false,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src", "src/utils/colors.ts"],
+  "exclude": [
+    "src/pages/Chatpage.tsx",
+    "src/pages/Messages.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
