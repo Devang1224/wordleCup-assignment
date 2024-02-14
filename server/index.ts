@@ -27,7 +27,7 @@ server.listen(3000, () => {
 
 const io = new Server(server, {
     cors:{
-        origin:'https://wordlecup-assignment.netlify.app'
+        origin:'https://wordlecup-assignment.netlify.app/'
     }
 });
 
