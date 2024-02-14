@@ -45,12 +45,12 @@ useEffect(()=>{
         {
           messages?.map((item,index)=>{
             return <div ref={scrollRef} key={index} className="flex justfify-start mb-5 ">
-                     <div className="min-w-[40px]">
-                      <img src={(avatars as AvatarMap)[item.userIcon]} width={40} />
+                     <div className="">
+                      <img src={(avatars as AvatarMap)[item.userIcon]} className="max-w-[30px] md:max-w-[40px]"/>
                      </div>
                      <div className="flex flex-col items-start ml-3">
-                      <p style={{ color: item.userColor }} className="font-semibold">{item.username}</p>
-                      <p className="text-start mt-2">{item.message}</p>
+                      <p style={{ color: item.userColor }} className="font-semibold text-[14px] md:text-[16px]">{item.username}</p>
+                      <p className="text-start mt-2 text-[14px] md:text-[16px]">{item.message}</p>
                      </div>
                    </div>
           })
