@@ -16,7 +16,6 @@ function App() {
     userIcon:'',
     userColor:''
   })
-console.log(userDetails.username);
   return (
     <>
     {

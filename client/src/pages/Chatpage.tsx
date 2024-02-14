@@ -37,7 +37,7 @@ const Chatpage: React.FC<ChatpageProps> = ({socket,userDetails}) => {
         socket.emit('send-message',data);
       }
       messageRef.current.value = '';
-      
+      setToggleEmojiPicker(false)
     }
   }
 
@@ -76,8 +76,8 @@ const handleClickedEmoji = (emoji:any)=>{
             <FontAwesomeIcon icon={faPaperPlane} className='text-#e9e7e7 text-[18px] md:text-[24px] cursor-pointer ' />
           </button>
          {
-          toggleEmojiPicker && <div className='origin-bottom-right absolute translate-x-[-100%] translate-y-[-100%]'>
-                                 <EmojiPicker width={300} onEmojiClick={handleClickedEmoji}/>
+          toggleEmojiPicker && <div className='w-[250px] md:w-[300px] origin-bottom-right absolute translate-x-[-70%] translate-y-[-100%]'>
+                                 <EmojiPicker width='100%' onEmojiClick={handleClickedEmoji} theme='dark' previewConfig={{showPreview:false}} />
                                </div>
           }
         </div>

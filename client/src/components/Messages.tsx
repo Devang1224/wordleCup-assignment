@@ -28,7 +28,6 @@ useEffect(()=>{
 
   socket.on('user-message',(data:Data)=>{
       setMessages((prev)=>[...prev,data])
-      console.log(data);
   })
 
 return ()=> socket.off('user-message')
