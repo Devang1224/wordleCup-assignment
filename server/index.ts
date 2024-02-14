@@ -7,7 +7,9 @@ const app = express();
 const server = http.createServer(app);
 
 
-app.use(cors());
+app.use(cors({
+    origin:'https://wordlecup-assignment.netlify.app'
+}));
 app.use(express.json());
 
 interface userData{
@@ -27,7 +29,7 @@ server.listen(3000, () => {
 
 const io = new Server(server, {
     cors:{
-        origin:'https://wordlecup-assignment.netlify.app/'
+        origin:'https://wordlecup-assignment.netlify.app'
     }
 });
 
