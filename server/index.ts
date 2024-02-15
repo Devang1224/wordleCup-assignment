@@ -6,14 +6,14 @@ const socketIo = require('socket.io');
 
 const app = express();
 app.use(cors({
-    origin: 'https://wordle-cup-assignment.vercel.app/',
+    origin: 'https://wordle-cup-assignment.vercel.app',
 }));
 
 
 const server = http.createServer(app);
 const io = socketIo(server,{
     cors: {
-        origin: 'https://wordle-cup-assignment.vercel.app/',
+        origin: 'https://wordle-cup-assignment.vercel.app',
         methods: ['GET', 'POST']
       }
 });
