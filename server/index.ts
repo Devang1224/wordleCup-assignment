@@ -2,19 +2,25 @@
 const express = require('express')
 const http = require('http');
 const cors = require('cors')
+const socketIo = require('socket.io');
 
 const app = express();
+app.use(cors({
+    origin: 'https://wordle-cup-assignment.vercel.app/',
+}));
+
+
 const server = http.createServer(app);
-const io = require('socket.io')(server,{
+const io = socketIo(server,{
     cors: {
         origin: 'https://wordle-cup-assignment.vercel.app/',
         methods: ['GET', 'POST']
       }
 });
 
-app.use(cors());
+
 app.use(express.json());
-app.options('*', cors());
+
 
 interface userData{
     username:string,
