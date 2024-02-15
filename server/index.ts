@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = require('socket.io')(server,{
     cors: {
-        origin: 'https://wordlecup-assignment.netlify.app',
+        origin: 'https://wordle-cup-assignment.vercel.app/',
         methods: ['GET', 'POST']
       }
 });
@@ -15,6 +15,7 @@ const io = require('socket.io')(server,{
 app.use(cors());
 app.use(express.json());
 app.options('*', cors());
+
 interface userData{
     username:string,
     message:string,
