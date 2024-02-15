@@ -8,8 +8,8 @@ import {io} from "socket.io-client";
 
 function App() {
 
-  const socket = useMemo(()=>io("https://wordlecup-assignment-production.up.railway.app",{ transports: ['websocket', 'polling', 'flashsocket'] }),[])
-
+  const socket = useMemo(()=>io("http://localhost:3000"),[])
+// https://wordlecup-assignment-production.up.railway.app
   const[userDetails,setUserDetails] = useState({
     username:'',
     userId:'',
