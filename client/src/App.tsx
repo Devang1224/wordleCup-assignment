@@ -9,7 +9,7 @@ import {io} from "socket.io-client";
 function App() {
 
   const socket = useMemo(()=>io("https://wordlecup-assignment-backend-production.up.railway.app"),{extraHeaders: {
-    ‘Access-Control-Allow-Origin’: ‘*’
+    'Access-Control-Allow-Origin': ‘*’
     }},[])
 // https://wordlecup-assignment-production.up.railway.app
   const[userDetails,setUserDetails] = useState({
