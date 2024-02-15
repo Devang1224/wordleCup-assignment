@@ -28,12 +28,16 @@ $ npm run dev
 
 - React JS
 - Tailwind css
+
+
+
 - Typescript
 - Node.js
 - Socket.io
 
 ## **Demo -**
 
+https://github.com/Devang1224/wordleCup-assignment/assets/97470914/9926ea51-0350-4caa-bbd6-4ac5372779a9
 
 
 
