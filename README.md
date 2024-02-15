@@ -34,4 +34,4 @@ $ npm run dev
 
 ## **Demo -**
 
-https://github.com/JatinSingh08/sneakhead/assets/97881261/867811c3-5000-4bd5-819c-fc03078c6dcd
+https://github.com/Devang1224/wordleCup-assignment/client/src/assets/demovideo/2024.02.15_5806.mp4
