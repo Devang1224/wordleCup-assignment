@@ -1,7 +1,7 @@
 <div align="center"> 
  
 # Chatflix
-## A simple chat application 👟
+## A simple chat application 
 </div>
 
 ## **How to install and run locally ?**
